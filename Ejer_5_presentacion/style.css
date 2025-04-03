@@ -1,0 +1,63 @@
+*{
+    background-image: "fondo.jpg";
+}
+
+.imagen {
+    width: 180px;
+    height: 180px;
+    justify-content: center;  
+}
+
+div {
+    background-color: beige;
+    width: 500px;
+    height: 600px;
+    /* Se usa para que el div este cuadrado en medio*/
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.nombre {
+    border-style: solid;
+    border-color: #a8ec86;
+}
+
+ul.lista {
+    list-style-type: none;
+    padding: 0px;
+}
+
+
+/* el link esta en blanco */
+a:link {color: black;}
+  
+/* visita el link */
+a:visited {color: rgb(177, 224, 177);}
+  
+/* ratón sobre el link */
+a:hover {color: #a8ec86;}
+  
+/* selecciona el link */
+a:active {color: white;}
+/*Quitamos la decoración a los links*/
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: underline;}
+a:active {text-decoration: underline;}
+
+.boton {
+    padding: 3px 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    background-color: #abcaac; /* Fondo verde */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+
+  /* Estilos al pasar el mouse por encima */
+  .boton:hover {
+    background-color: #53b357; /* Cambio de color de fondo al pasar el mouse */
+  }

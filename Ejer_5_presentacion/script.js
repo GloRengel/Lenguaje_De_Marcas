@@ -20,6 +20,10 @@ const nameColorButton = document.getElementById('bt');
 //Creamos otra variable el elemento al que le quiero aplicar el estilo
 const titleName = document.getElementById('nombre');
     //Creamos el evento del click, cuando clicamos hace el evento
+
+    //Creamos una variable para que contenga lo que tenemos en el nombre
+    //Esta variable tiene que ir fuera de la función
+    const Name = titleName.textContent; 
                                             //Los parentesis y flechas () => 
                                             //hace lo mismo que poner function()
     nameColorButton.addEventListener('click', function() {
@@ -28,12 +32,20 @@ const titleName = document.getElementById('nombre');
         //console.warn sale en la consola
         console.warn('click------------------')
         //El alert sale con una ventanita
-        alert('esta funcionando, todo bien')
+        //alert('esta funcionando, todo bien')
         
         if (titleName.style.color === "") {
             titleName.style = "color:green; font-style: italic";
+            //Ahora vamos a meterle que también cambie el contenido del nombre
+                                    //Se pueden meter etiquetas de HTML dentro de lo que cambiamos en java
+            titleName.innerHTML  = "<br><br>1ºDAW";
+            //titleName.textContent = "1ºDAW";
+
         } else {
-            titleName.style = ""
+            titleName.style = "";
+            //Ponemos que cuando le vuelvas a dar al click ponga el nombre que estaba antes
+            //titleName.textContent = Name;
+            titleName.innerHTML = Name;
         }
         
 
@@ -46,6 +58,43 @@ const titleName = document.getElementById('nombre');
         }*/
         
     });
+
+
+
+const OcultarNameButton = document.getElementById('botonom');
+
+
+    OcultarNameButton.addEventListener('click', () => {
+
+        console.warn('click------------------')
+        if(titleName.style.display === "none") {
+            titleName.style.display = "block";
+        } else {
+            titleName.style.display = "none";
+        }
+
+    });
+
+
+
+
+const ContactoButton = document.getElementById('contacto');
+const ContenidoContButton = document.getElementById('contantForm');
+
+
+ContactoButton.addEventListener('click', () => {
+
+    console.warn('click------------------')
+    if(ContenidoContButton.style.display === "block") {
+        ContenidoContButton.style.display = "none";
+    } else {
+        ContenidoContButton.style.display = "block";
+    }
+
+});
+
+
+
 
 /*
 //Creamos un boton que cuando pasa sobre el se cambia de color
